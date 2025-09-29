@@ -63,6 +63,13 @@ int main(void)
         int row = choice / BOARDSIZE;
         int col = choice % BOARDSIZE;
 
+        if (board[row][col] == 'X' || board[row][col] == 'O')
+        {
+            printf("\n");
+            printf("Cell already taken. Try again.\n");
+            continue;
+        }
+
         if (turn == player1)
         {
             board[row][col] = 'X';
